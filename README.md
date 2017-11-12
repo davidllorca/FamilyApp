@@ -9,3 +9,4 @@ Test application.
 - Repository pattern.
 - View binding by [Butterknife](https://github.com/JakeWharton/butterknife)
 - Json deserialization/serialization by [Gson](https://github.com/google/gson)
+   
