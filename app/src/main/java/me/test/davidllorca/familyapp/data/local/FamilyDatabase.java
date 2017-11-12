@@ -8,6 +8,8 @@ import android.content.Context;
 import me.test.davidllorca.familyapp.data.model.Member;
 
 /**
+ * Local database implemented with {@link RoomDatabase}. Android Architecture Components Library.
+ * <p>
  * Created by David Llorca <davidllorcabaron@gmail.com> on 10/11/17.
  */
 @Database(entities = {Member.class}, version = 1)
@@ -24,13 +26,13 @@ public abstract class FamilyDatabase extends RoomDatabase {
     /**
      * Return single instance of local database.
      *
-     * @param context
+     * @param context Context
      * @return {@link FamilyDatabase} instance.
      */
-    public static FamilyDatabase getInstance(Context context){
-        if(sInstance == null) {
-            synchronized (LOCK){
-                if(sInstance ==null){
+    public static FamilyDatabase getInstance(Context context) {
+        if (sInstance == null) {
+            synchronized (LOCK) {
+                if (sInstance == null) {
                     sInstance = Room.databaseBuilder(context.getApplicationContext(),
                             FamilyDatabase.class, FamilyDatabase.DATABASE_NAME).build();
                 }

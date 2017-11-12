@@ -1,7 +1,6 @@
 package me.test.davidllorca.familyapp.data.model;
 
 import android.arch.persistence.room.Entity;
-import android.arch.persistence.room.Ignore;
 import android.arch.persistence.room.PrimaryKey;
 
 /**
@@ -82,6 +81,7 @@ public class Member {
         public static int DAUGHTER = 3;
         public static int PET = 4;
     }
+
     public static int[] getChildTypes() {
         return new int[]{Role.SON, Role.DAUGHTER};
     }

@@ -56,7 +56,7 @@ public class HomeActivity extends AppCompatActivity implements HomeContract.View
         // Init views
         LinearLayoutManager layoutManager =
                 new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
-        mAdapter = new MemberAdapter(this, new ArrayList<Member>());
+        mAdapter = new MemberAdapter(this, new ArrayList<>());
         mList.setLayoutManager(layoutManager);
         mList.setAdapter(mAdapter);
     }

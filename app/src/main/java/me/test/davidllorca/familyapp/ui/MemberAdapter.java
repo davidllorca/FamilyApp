@@ -16,7 +16,7 @@ import me.test.davidllorca.familyapp.data.model.Member;
 
 /**
  * Adapter by collection of {@link Member}.
- *
+ * <p>
  * Created by David Llorca <davidllorcabaron@gmail.com> on 11/11/17.
  */
 public class MemberAdapter extends RecyclerView.Adapter<MemberAdapter.MemberAdapterViewHolder> {
@@ -33,11 +33,13 @@ public class MemberAdapter extends RecyclerView.Adapter<MemberAdapter.MemberAdap
     public MemberAdapterViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(mContext).inflate(R.layout.item_member, parent, false);
         view.setFocusable(true);
-        return new MemberAdapterViewHolder(view);    }
+        return new MemberAdapterViewHolder(view);
+    }
 
     @Override
     public void onBindViewHolder(MemberAdapterViewHolder holder, int position) {
         Member member = mMembers.get(position);
+
         // {"Father", "Mother", "Son",..}
         String[] roles = mContext.getResources().getStringArray(R.array.role_array);
 
@@ -60,7 +62,7 @@ public class MemberAdapter extends RecyclerView.Adapter<MemberAdapter.MemberAdap
         notifyDataSetChanged();
     }
 
-    public class MemberAdapterViewHolder extends RecyclerView.ViewHolder {
+    class MemberAdapterViewHolder extends RecyclerView.ViewHolder {
 
         @BindView(R.id.tv_item_member_text)
         TextView mText;

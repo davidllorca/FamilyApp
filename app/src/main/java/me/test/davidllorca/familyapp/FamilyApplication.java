@@ -5,7 +5,7 @@ import android.content.Context;
 
 /**
  * Custom implementation {@link Application} class.
- *
+ * <p>
  * Created by David Llorca <davidllorcabaron@gmail.com> on 11/11/17.
  */
 public class FamilyApplication extends Application {
@@ -24,7 +24,7 @@ public class FamilyApplication extends Application {
     /**
      * Public getter to application {@link Context}.
      */
-    public static Context getContext(){
+    public static Context getContext() {
         return mContext;
     }
 }

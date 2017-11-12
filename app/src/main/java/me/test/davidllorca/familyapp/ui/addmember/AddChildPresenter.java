@@ -29,11 +29,8 @@ public class AddChildPresenter implements AddChildContract.Presenter {
         mRepository.saveMember(member)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(() -> {
-                    mView.onAddChildSuccess();
-                } , throwable -> {
-                    Log.e(LOG_TAG, throwable.getMessage());
-                });
+                .subscribe(() -> mView.onAddChildSuccess(),
+                        throwable -> Log.e(LOG_TAG, throwable.getMessage()));
     }
 
 }

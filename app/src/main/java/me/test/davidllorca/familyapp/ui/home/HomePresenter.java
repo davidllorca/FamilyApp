@@ -28,10 +28,7 @@ public class HomePresenter implements HomeContract.Presenter {
         mRepository.getMembers()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(members -> {
-                    mView.showMembers(members);
-                }, throwable -> {
-                    Log.e(LOG_TAG, throwable.getMessage());
-                });
+                .subscribe(members -> mView.showMembers(members),
+                        throwable -> Log.e(LOG_TAG, throwable.getMessage()));
     }
 }

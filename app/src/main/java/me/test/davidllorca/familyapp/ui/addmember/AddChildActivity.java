@@ -1,9 +1,9 @@
 package me.test.davidllorca.familyapp.ui.addmember;
 
+import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.MenuItem;
@@ -110,7 +110,7 @@ public class AddChildActivity extends AppCompatActivity implements AddChildContr
         // Tranform to Member field types required
         char gender = mGenderRadioGroup.getCheckedRadioButtonId() == R.id.rb_add_member_male ?
                 mGenderArray[0].charAt(0) : mGenderArray[1].charAt(0);
-        int role = gender == mGenderArray[0].charAt(0)? Member.Role.SON : Member.Role.DAUGHTER;
+        int role = gender == mGenderArray[0].charAt(0) ? Member.Role.SON : Member.Role.DAUGHTER;
 
         // Creates new member
         Member newMember = new Member(role,

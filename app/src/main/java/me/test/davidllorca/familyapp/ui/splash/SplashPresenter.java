@@ -45,15 +45,15 @@ public class SplashPresenter implements SplashContract.Presenter {
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(members -> {
-                    if(members.size() > 0){
+                    if (members.size() > 0) {
                         mView.onFinishDatabaseTask();
                     } else {
                         saveFakeData();
                     }
-                }, throwable ->{
+                }, throwable -> {
                     mView.showErrorMsg();
                     Log.e(LOG_TAG, throwable.getMessage());
-                } );
+                });
     }
 
     private void saveFakeData() {
@@ -63,9 +63,7 @@ public class SplashPresenter implements SplashContract.Presenter {
                 .delay(2000, TimeUnit.MILLISECONDS) // Simulate long operations
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(() -> {
-                            mView.showInitDatabaseSuccessMsg();
-                        },
+                .subscribe(() -> mView.showInitDatabaseSuccessMsg(),
                         throwable -> {
                             mView.showErrorMsg();
                             Log.e(LOG_TAG, throwable.getMessage());
@@ -82,9 +80,9 @@ public class SplashPresenter implements SplashContract.Presenter {
         Reader reader = new InputStreamReader(FamilyApplication.getContext().getResources().openRawResource(R.raw.fake_data));
         Type type = new TypeToken<List<Member>>() {
         }.getType();
-        List<Member> members = gson.fromJson(reader, type);
-        return members;
+        return gson.fromJson(reader, type);
     }
 
 
 }
+

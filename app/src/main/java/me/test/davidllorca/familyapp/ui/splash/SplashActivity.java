@@ -14,16 +14,14 @@ import me.test.davidllorca.familyapp.ui.home.HomeActivity;
  * Created by David Llorca <davidllorcabaron@gmail.com> on 11/11/17.
  */
 
-public class SplashActivity extends AppCompatActivity implements SplashContract.View{
-
-    private SplashContract.Presenter mPresenter;
+public class SplashActivity extends AppCompatActivity implements SplashContract.View {
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         //Init presenter
-        mPresenter =
+        SplashContract.Presenter presenter =
                 new SplashPresenter(this, Injection.provideFamilyRepository(this));
     }
 

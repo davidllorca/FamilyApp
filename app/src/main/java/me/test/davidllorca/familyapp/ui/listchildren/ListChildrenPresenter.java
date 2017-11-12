@@ -28,10 +28,7 @@ public class ListChildrenPresenter implements ListChildrenContract.Presenter {
         mRepository.getChildren()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(members -> {
-                    mView.showChildren(members);
-                }, throwable -> {
-                    Log.e(LOG_TAG, throwable.getMessage());
-                });
+                .subscribe(members -> mView.showChildren(members),
+                        throwable -> Log.e(LOG_TAG, throwable.getMessage()));
     }
 }
