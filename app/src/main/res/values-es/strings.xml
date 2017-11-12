@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">FamilyApp</string>
+
+    <string name="title_home_activity">Home</string>
+    <string name="title_activity_splash">Splash</string>
+    <string name="title_list_children_activity">Lista hijos</string>
+    <string name="title_add_child_activity">Añadir hijo</string>
+
+    <string name="action_see_children">Ver hijos</string>
+    <string name="action_save">Guardar</string>
+
+    <string name="text_member">Soy %1$s %2$s (Edad: %3$d, Sexo: %4$c) y soy %5$s</string>
+
+    <string name="msg_populate_database_success">Inicio de Base de datos : OK</string>
+    <string name="msg_populate_database_init">Inicizializando Bade de datos...</string>
+    <string name="msg_error_generic">Ups! Sucedió algún error...</string>
+    <string name="msg_child_save_success">Hijo guardado correctamente</string>
+
+    <string name="form_name">Nombre</string>
+    <string name="form_surname">Apellido</string>
+    <string name="form_age">Edad</string>
+    <string name="form_male">Masculino</string>
+    <string name="form_female">Femenino</string>
+    <string name="form_role">Rol</string>
+    <string name="form_gender">Sexo</string>
+
+    <string-array name="role_array">
+        <item>Padre</item>
+        <item>Madre</item>
+        <item>Hijo</item>
+        <item>Hija</item>
+        <item>Mascota</item>
+    </string-array>
+
+    <string-array name="gender_array">
+        <item>M</item>
+        <item>F</item>
+    </string-array>
+
+</resources>

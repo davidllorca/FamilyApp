@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="me.test.davidllorca.familyapp.ui.home.HomeActivity">
+    <item
+        android:id="@+id/action_see_children"
+        android:icon="@drawable/ic_list_bulleted_white_24dp"
+        android:title="@string/action_see_children"
+        app:showAsAction="always" />
+</menu>

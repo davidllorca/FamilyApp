@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">FamilyApp</string>
+
+    <string name="title_home_activity">Home</string>
+    <string name="title_activity_splash">Splash</string>
+    <string name="title_list_children_activity">List children</string>
+    <string name="title_add_child_activity">Add child</string>
+
+    <string name="action_see_children">See children</string>
+    <string name="action_save">Save</string>
+
+    <string name="text_member">I\'m %1$s %2$s (Age: %3$d, Gender: %4$c) and I\'m %5$s</string>
+
+    <string name="msg_populate_database_success">Init Database: SUCCESS</string>
+    <string name="msg_populate_database_init">Init database...</string>
+    <string name="msg_error_generic">Ops! Something wrong happened...</string>
+    <string name="msg_child_save_success">Child saved successfully</string>
+
+    <string name="form_name">Name</string>
+    <string name="form_surname">Surname</string>
+    <string name="form_age">Age</string>
+    <string name="form_male">Male</string>
+    <string name="form_female">Female</string>
+    <string name="form_role">Role</string>
+    <string name="form_gender">Gender</string>
+
+    <string-array name="role_array">
+        <item>Father</item>
+        <item>Mother</item>
+        <item>Son</item>
+        <item>Daughter</item>
+        <item>Pet</item>
+    </string-array>
+
+    <string-array name="gender_array">
+        <item>M</item>
+        <item>F</item>
+    </string-array>
+
+</resources>

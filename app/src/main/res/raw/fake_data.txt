@@ -1,0 +1,44 @@
+[
+    {
+       "role": 2,
+       "name":"Juan",
+       "surname":"López",
+       "age": 5,
+       "gender":"M"
+    },
+    {
+       "role": 3,
+       "name":"Laura",
+       "surname":"López",
+       "age": 4,
+       "gender":"F"
+    },
+    {
+     "role": 0,
+     "name":"Juan",
+     "surname":"López",
+     "age": 35,
+     "gender":"M"
+    },
+    {
+     "role": 1,
+     "name":"Laura",
+     "surname":"Pérez",
+     "age": 32,
+     "gender":"F"
+    },
+    {
+     "role": 2,
+     "name":"Juan Jr.",
+     "surname":"López",
+     "age": 3,
+     "gender":"M"
+    },
+    {
+     "role": 4,
+     "name":"Tin",
+     "surname":"López",
+     "age": 2,
+     "gender":"M"
+    }
+]
